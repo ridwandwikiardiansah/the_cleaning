@@ -1,0 +1,29 @@
+.lokasiContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    background-color: palegoldenrod;
+}
+
+.lokasiTitle{
+    margin-top: 5px;
+    font-size: small;
+    margin-right: 10px;
+}
+
+.dropdown{
+    border-bottom-color:orangered ;
+    border-top-color: transparent;
+    border-left-color:transparent ;
+    border-right-color: transparent;
+    background-color: transparent;
+    text-align: center;
+    font-size: small;
+    width: 400px;
+    height: 25px;
+}
+
+.dropdownItem{
+    font-size: small;
+}

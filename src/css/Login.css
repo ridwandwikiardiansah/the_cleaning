@@ -1,0 +1,25 @@
+.loginContainer{
+    width: 100vw;
+}
+
+.imageLogin{
+    background :url('../asset/boruto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.black{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+
+.loginForms{
+    width: 50px;
+}
+
+.marginLeft{
+    margin-left: 20px;
+}

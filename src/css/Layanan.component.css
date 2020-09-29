@@ -1,0 +1,23 @@
+.contentcenter{
+    text-align: center;
+}
+
+.textLayanan{
+    font-size: medium;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+/* .layananContainer{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+
+.layanan{
+    display: flex;
+    background-color: royalblue;
+    justify-content: center;
+    flex-direction: row;
+}
+ */

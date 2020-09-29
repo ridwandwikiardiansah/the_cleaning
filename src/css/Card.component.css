@@ -1,0 +1,54 @@
+.right{
+    text-align: right;
+}
+
+.title{
+    font-size: small;
+    color: black;
+    margin-bottom: 0;
+}
+
+.price{
+    margin-top: 0;
+    font-size: small;
+    font-weight: normal;
+    color: orangered;
+}
+
+.hour{
+    font-size: small;
+    text-align: center;
+}
+
+.text{
+    color: black;
+    font-size: x-large;
+}
+
+.ubah{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.priceTotal{
+    color:orangered;
+    font-size: medium;
+    font-weight: normal;
+}
+
+.buttonOrder{
+    background-color:orange;
+    width: 18rem;
+    height: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+}
+
+.borderorange{
+    border-color: orangered;
+    border-width: medium;
+}

@@ -1,0 +1,34 @@
+/* .kalenderContainer{
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    max-height: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.cardCalender{
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    width: 50px;
+    flex-direction: column;
+    background-color: white;
+
+} */
+
+.date{
+    font-size: medium;
+}
+
+.radiuscard{ 
+    border-radius: 30px;
+    box-shadow: gray;
+}
+
+.radius{
+    border-radius: 10px;  
+}

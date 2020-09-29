@@ -1,0 +1,102 @@
+.center{
+    text-align: center;
+    justify-content: center;
+}
+
+.cardimage{
+    background: url('../asset/boruto.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 7rem;
+    border-radius: 10px;
+}
+
+.background{
+    background-color: #f4f3ef;
+}
+
+.transparent{
+    background-color: transparent;
+}
+
+
+
+
+/* .container {
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 100vh;
+    padding: 0%;
+    background-color: whitesmoke;
+}
+
+.image{
+    width: 100vw;
+}
+
+.contentContainer{
+    margin-top: 10px;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    max-height: max-content;
+    min-height: 200px;
+    max-height: max-content;
+    justify-content: space-between;
+}
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    padding-top: 10px;
+}
+
+.centerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    padding-top: 10px;
+}
+
+.rightContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    width: 33%;
+}
+
+.text{
+    font-size: large;
+    font-family: Poppins;
+}
+
+.imageContent{
+    margin-top: 10px;
+    border-radius: 20px;
+    max-width: 20rem;
+    max-height: 10rem;
+}
+
+.textTanggal{
+    font-size: small;
+    font-family: Poppins;
+    margin-top: 20px;
+}
+
+.jamContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.textKehadiran{
+    font-size: small;
+    margin-right: 20px;
+} */

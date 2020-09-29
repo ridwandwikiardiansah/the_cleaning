@@ -1,0 +1,49 @@
+.headerContainer{
+  height: 50px;
+  background-color: royalblue;
+}
+
+.justifyright{
+    padding-right: 0px;
+}
+
+/* .headerContainer{
+    height: 50px;
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:#0000002b;
+    justify-content: space-between;
+    padding-left: 5%; 
+} */
+
+/* .titleHeader{ */
+    /* background-color: chocolate; */
+    /* color: white;
+    font-family: Poppins;
+    font-size: large; */
+/* } */
+
+/* .menuContainer{
+display: flex;
+flex-direction: row;
+position: absolute;
+padding-left: 10%;
+} */
+
+/* .menu{
+    color: white;
+    margin-right: 10px;
+} */
+
+/* .loginContainer{ */
+    /* background-color: crimson; */
+    /* display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: auto;
+    margin-right: 10%;
+    justify-content: flex-end; */
+/* } */
