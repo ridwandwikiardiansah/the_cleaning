@@ -5,12 +5,13 @@ import Order from '../../component/Order.component';
 import Layanan from '../../component/Layanan.component';
 import Lokasi from '../../component/Lokasi.component';
 import logo from '../../asset/boruto.jpg';
-import { isEmpty } from 'lodash';
+import { isEmpty, isEqual } from 'lodash';
 import { getAllPriceList } from '../../utils/Price.utils'
 import Kalendar from '../../component/Kalender.component';
 import '../../css/Home.css';
 import DateTimePicker from '../../component/Picker.component';
 import OrderCard from '../../component/OrderCard.component';
+import {AnimationWrapper} from 'react-hover-animation'
 
 
 
@@ -18,31 +19,40 @@ class Home extends Component{
     constructor(props){
         super(props)
         this.state = {
+            isActive: false,
             time: '10:00',
-            pricename: 'dailycleaning',
+            pricename: 'Daily Cleaning',
             price:[],
         }
         this.componentDidMount = this.componentDidMount.bind(this);
+        this.handleClickService = this.handleClickService.bind(this);
     }
 
-    componentDidMount(){
-      getAllPriceList().then(
-          ()=>{
-            const datas = sessionStorage.getItem('userPriceList');
-            const json = JSON.parse(datas)
-            console.log(json, 'datas')
-            this.setState({
-                price: json
-            })
-          }
-      )
-     
+        componentDidMount(){
+        getAllPriceList().then(
+            ()=>{
+                const datas = sessionStorage.getItem('userPriceList');
+                const json = JSON.parse(datas)
+                console.log(json, 'datas')
+                this.setState({
+                    price: json
+                })})
+        }
+
+    handleClickService(name){
+        this.setState({
+            isActive:true,
+            priceName: name,
+        })
     }
 
     render(){
-        const { price } = this.state;
-        const onChange = new Date();
+        const { price,isActive, priceName } = this.state;
+        const active = {backgroundColor:'#f56942', marginTop: '4px'}
+        const inActive = {marginTop: '4px'}
+        const activeStyle = isActive ? active : null
         return(
+           
             <div className='container=fluid background'>
                 <Header/>
                     <div>
@@ -52,10 +62,15 @@ class Home extends Component{
                         <div className='row no-gutters p-2'>
                              <div className='col-lg-3 p-2 background center'>
                                 <h1 className='text'>Layanan Kami</h1>
-                                    <div className='mt-2'>
+                                    <div className='container mt-2 '>
                                         { !isEmpty(price) ? (
                                              price.map( data => (
-                                                <Layanan serviceName={data.priceName}/>
+                                                <AnimationWrapper>
+                                                 <div onClick={()=> this.handleClickService(data.priceName)} 
+                                                 style={isEqual(data.priceName, priceName) ? active:inActive }>
+                                                     <Layanan serviceName={data.priceName}/>
+                                                 </div>
+                                                 </AnimationWrapper>
                                             ))
                                         ): null
                                            
@@ -77,7 +92,7 @@ class Home extends Component{
                                      <DateTimePicker/>
                                     </div>
                                 </div>
-                                    <OrderCard data={price}/>       
+                                    <OrderCard data={price} Title={priceName}/>       
                             </div>
                             <div className='col-lg-3 p-2 background center'>
                             <h1 className='text'>Rincian Pesanan</h1>
@@ -86,6 +101,7 @@ class Home extends Component{
                         </div>    
                     </div>
                 </div>
+               
         );
     }
 }

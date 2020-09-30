@@ -1,5 +1,17 @@
-.contentcenter{
-    text-align: center;
+.left{
+  margin-left: 100px;
+}
+
+.orange{
+    background-color: orangered;
+}
+
+.align-center{
+    align-self: center;
+}
+
+.justify-center{
+   align-self: center;
 }
 
 .textLayanan{

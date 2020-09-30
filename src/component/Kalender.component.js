@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/Kalendar.css';
 import moment from 'moment';
+import { AnimationWrapper } from 'react-hover-animation'
 
 
 export default class Kalender extends Component {
@@ -22,18 +23,24 @@ export default class Kalender extends Component {
         return(
             <div className='container'>
                 <div className='row justify-content-center p-2'>
+                    <AnimationWrapper>
                     <div className='col-lg-2 col-md-2 col-sm-2 radius m-1 p-2 '>
                         <h1 className='date'>{now}</h1>
                         <h1 className='date'>{hari}</h1>
                     </div>
+                    </AnimationWrapper>
+                    <AnimationWrapper>
                     <div className='col-lg-2 col-md-2 col-sm-2 radius m-1 p-2 '>
                         <h1 className='date'>{now2}</h1>
                         <h1 className='date'>{hari2}</h1>
                     </div>
+                    </AnimationWrapper>
+                    <AnimationWrapper>
                     <div className='col-lg-2 col-md-2 col-sm-2 radius m-1 p-2 '>
                         <h1 className='date'>{now3}</h1>
                         <h1 className='date'>{hari3}</h1>
-                    </div>    
+                    </div> 
+                    </AnimationWrapper>                       
                 </div>
             </div>
 

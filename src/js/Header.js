@@ -8,7 +8,7 @@ class Header extends React.PureComponent {
     constructor(props){
         super(props);
         this.state = {
-
+            
         }
         this._clickDashboard = this._clickDashboard.bind(this);
     }
@@ -29,9 +29,11 @@ class Header extends React.PureComponent {
                     <Link className='navbar-brand'> Layanan</Link>
                     <Link className='navbar-brand'> Pengaduan</Link>
                     <Link className='navbar-brand'> Tentang Kami</Link>     
-                </div>
+                <div className='header-right'>
                     <Link className='navbar navbar-brand' to='/login'> Masuk</Link>
                     <Link className='navbar-brand' to='/register'> Register</Link>
+                </div>
+                    </div>
                 </div>
             </nav>
         );

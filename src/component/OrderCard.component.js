@@ -6,12 +6,12 @@ export default class OrderCard extends Component {
 
 
     render(){
-      const {data}=this.props;
+      const { data, Title}=this.props;
       console.log(data,'props')
         return(
           <div className='container pb-4 radiuscard white shadow'>
             <div className='container p-1 left '>
-              <h1 className='titleOrderCard mt-1'>Daily Cleaning</h1>
+              <h1 className='titleOrderCard mt-1'>{Title}</h1>
             </div>
             <div className='row bg-secondary'>
               <div className='col-lg-2 col-md-2 col-sm-2 p-2 white'>
