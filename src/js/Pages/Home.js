@@ -22,6 +22,7 @@ class Home extends Component{
             isActive: false,
             time: '10:00',
             pricename: 'Daily Cleaning',
+            description: '',
             price:[],
         }
         this.componentDidMount = this.componentDidMount.bind(this);
@@ -39,15 +40,16 @@ class Home extends Component{
                 })})
         }
 
-    handleClickService(name){
+    handleClickService(name,desc){
         this.setState({
             isActive:true,
             priceName: name,
+            description:desc
         })
     }
 
     render(){
-        const { price,isActive, priceName } = this.state;
+        const { price,isActive, priceName, description } = this.state;
         const active = {backgroundColor:'#f56942', marginTop: '4px'}
         const inActive = {marginTop: '4px'}
         const activeStyle = isActive ? active : null
@@ -66,7 +68,7 @@ class Home extends Component{
                                         { !isEmpty(price) ? (
                                              price.map( data => (
                                                 <AnimationWrapper>
-                                                 <div onClick={()=> this.handleClickService(data.priceName)} 
+                                                 <div onClick={()=> this.handleClickService(data.priceName, data.priceDesc)} 
                                                  style={isEqual(data.priceName, priceName) ? active:inActive }>
                                                      <Layanan serviceName={data.priceName}/>
                                                  </div>
@@ -92,7 +94,7 @@ class Home extends Component{
                                      <DateTimePicker/>
                                     </div>
                                 </div>
-                                    <OrderCard data={price} Title={priceName}/>       
+                                    <OrderCard data={price} Title={priceName} Desc={description}/>       
                             </div>
                             <div className='col-lg-3 p-2 background center'>
                             <h1 className='text'>Rincian Pesanan</h1>

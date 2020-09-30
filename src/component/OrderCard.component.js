@@ -6,7 +6,7 @@ export default class OrderCard extends Component {
 
 
     render(){
-      const { data, Title}=this.props;
+      const { data, Title , Desc}=this.props;
       console.log(data,'props')
         return(
           <div className='container pb-4 radiuscard white shadow'>
@@ -24,7 +24,7 @@ export default class OrderCard extends Component {
                 <div className='mb-4'>
                 <h3 className='titleDurasi left ml-4'>Deskripsi Pekerjaan</h3>
                 </div>
-                <h1 className='deskripsi left ml-4'> dusting, sweeping dll,dusting, sweeping dll,dusting, sweeping dll,dusting, sweeping dll</h1>
+        <h1 className='deskripsi left ml-4'>{Desc}</h1>
                 <input
                  className='address'
                  placeholder='Masukkan Alamat'/>
