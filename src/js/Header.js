@@ -25,14 +25,14 @@ class Header extends React.PureComponent {
                     <div className='navbar-header'>
                         <Link to='/' className='navbar-brand text'> The Cleaning</Link>
                     </div>
-                <div className=' collapse navbar-collapse'> 
+               
                     <Link className='navbar-brand'> Layanan</Link>
                     <Link className='navbar-brand'> Pengaduan</Link>
-                    <Link className='navbar-brand'> Tentang Kami</Link>     
+                    <Link className='navbar-brand' to='/profile'> Tentang Kami</Link>     
                 <div className='header-right'>
                     <Link className='navbar navbar-brand' to='/login'> Masuk</Link>
                     <Link className='navbar-brand' to='/register'> Register</Link>
-                </div>
+              
                     </div>
                 </div>
             </nav>

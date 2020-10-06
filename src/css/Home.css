@@ -3,6 +3,23 @@
     justify-content: center;
 }
 
+.update{
+    width: 80px;
+    height:40px;
+    align-self: center;
+    margin-top: 15px;
+    margin-left: 20x;
+}
+
+.editprofile{
+    width: 25rem;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
 .cardimage{
     background: url('../asset/boruto.jpg');
     background-repeat: no-repeat;

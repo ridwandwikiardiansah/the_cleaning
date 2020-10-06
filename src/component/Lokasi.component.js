@@ -6,17 +6,16 @@ export default class Lokasi extends Component{
     
 
     render(){
+        const { Item, name, onChange } = this.props;
         return(
             <div className='container'>
                 <div className='row'>
                 <h1 className='lokasiTitle'>Pilih Lokasi Anda : </h1>
-            <select className='dropdown'>
-            <option className='dropdownItem'>Pilih Lokasi Anda</option>
-            <option className='dropdownItem'>Jakarta Selatan</option>
-            <option className='dropdownItem'>Tangerang</option>
-            <option className='dropdownItem'>Tangerang Selatan</option>
-            <option className='dropdownItem'>Depok</option>
-            <option className='dropdownItem'>Bogor</option>
+            <select className='dropdown' name={name} onChange={onChange}>
+                {Item.map(item =>(
+                    <option className='dropdownItem'>{item}</option>
+                ))
+                }
            </select>
                 </div>
            </div>

@@ -1,9 +1,7 @@
 import React from 'react';
 import '../../css/Login.css';
 import axios from 'axios';
-import {
-	BrowserRouter as Router, Route, Link, Redirect
-} from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import {isEmpty} from 'lodash';
 
 export default class Login extends React.PureComponent{
@@ -27,21 +25,21 @@ export default class Login extends React.PureComponent{
 	}
 
 	async handleSubmit(e){
-		const { email, password } = this.state;
-		
+		const { email, password } = this.state;	
 		try{
 		e.preventDefault();
 		const response = await axios.post('http://api.inkustudio.com/user/login',
 		{email: email,
 		password: password}).then(
-			response=>{
+			response => {
 				alert(response.data.message);
 				if (!isEmpty(response.data.data)){
 					this.setState({
 						isLogin:true
 					})
 					console.log(response, 'login')
-					 sessionStorage.setItem('user', JSON.stringify(response.data.data.userfound))
+					 sessionStorage.setItem('user', JSON.stringify(response.data.data),
+					 sessionStorage.setItem('usertoken', JSON.stringify(response.data.data.accessToken)))
 				
 				} else{
 					alert(response.data.message);
